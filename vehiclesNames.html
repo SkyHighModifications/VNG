@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VNG - Vehicle Names Generator</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="shortcut icon" href="img/vng.png" type="image/png"><!-- nice try -->
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+</head>
+<body>
+<div class="loader-container">
+    <h1 id="loading-text3" class="loading-text3">VEHICLE NAMES GENERATOR</h1>
+    <br></br>
+    <div id="loader2" class="loader2">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div id="loader" class="loader">
+            <div class="loading-bar"></div>
+        </div>
+    </div>
+    <br></br>
+    <h3 id="loading-text" class="loading-text">Loading....</h3>
+    <h3 id="loading-text2" class="loading-text2"><span id="loading-progress2">0</span> %</h3>
+    <div class="footer">
+        <div class="copyright2" id="copyright2">-----------------------------------------------------</div>       
+        <div class="copyright2" id="copyright2">
+            &copy; 2024 Code Master
+        </div>                                            
+    </div>
+</div>
+</div>
+<div id="content">
+<div class="container">
+    <div class="version" id="versionNumber"></div>
+  <h1>VEHICLE NAMES GENERATOR</h1>
+  <div id="vehicle-inputs">
+    <div class="input-group" style="display: block;">
+      <label for="spawnName1">Spawn Code</label>
+      <input type="text" id="spawnName1" placeholder="Enter vehicle spawn code">
+      <label for="displayName1">Real Display Name</label>
+      <input type="text" id="displayName1" placeholder="Enter real vehicle display name">
+    </div>
+  </div>
+  <button onclick="addVehicleInput()">Add Vehicle</button>
+  <br><br>
+  <button class="btn-nodanger" onclick="generateLua()">Generate LUA</button>
+  <div id="lua-output" style="display: none;">
+  <h2>Generated Lua Code</h2>
+  <pre><code id="lua-code"></code></pre>
+  <button type="button" class="btn-download" onclick="downloadLua()">Download LUA</button>
+  </div>
+  <h6>If you encounter any bugs or issues, please don't hesitate to open a ticket on our <a href="https://discord.gg/XcEHvPR9qA">Discord</a>.</h6>
+  <div class="copyright3">
+    &copy; 2024 Code Master
+</div> 
+</div>
+</body>
+</html>
+
+
